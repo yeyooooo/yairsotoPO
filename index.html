@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02040a" />
+    <meta
+      name="description"
+      content="Portafolio audiovisual de Yair Soto."
+    />
+    <title>Yair Soto</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+
+    <header class="site-header" data-parallax="0.14">
+      <a class="brand" href="#inicio" aria-label="Yair Soto">Yair Soto</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#portfolio">Portafolio</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy" data-parallax="0.08">
+          <p class="eyebrow">Edición / Grabación</p>
+          <h1 id="hero-title">Yair Soto</h1>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="button primary" href="#portfolio">Ver reel</a>
+            <a class="button ghost" href="#contacto">Contacto</a>
+          </div>
+        </div>
+
+        <button
+          class="showreel"
+          id="showreel"
+          type="button"
+          aria-label="Abrir video"
+          data-parallax="0.18"
+        >
+          <span class="showreel-media" aria-hidden="true">
+            <span class="scanline"></span>
+          </span>
+          <span class="play-mark" aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="section-kicker">Portafolio</div>
+        <div class="project" data-parallax="0.1">
+          <div class="project-info">
+            <h2 id="portfolio-title">Reel</h2>
+            <p>Edición / Color / Cámara</p>
+          </div>
+          <button class="project-preview" id="projectPreview" type="button" aria-label="Ver reel">
+            <span class="preview-glow" aria-hidden="true"></span>
+            <span class="play-mark small" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+        <div class="section-kicker">Contacto</div>
+        <form class="contact-form" id="contactForm">
+          <label for="visitorName">Nombre</label>
+          <input id="visitorName" name="name" type="text" autocomplete="name" />
+
+          <label for="visitorMessage">Mensaje</label>
+          <textarea
+            id="visitorMessage"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+
+          <div class="contact-actions">
+            <a class="button primary" id="phoneLink" href="sms:34-117-3818">Número</a>
+            <a
+              class="button ghost"
+              id="emailLink"
+              href="mailto:yaircmpss@gmail.com"
+            >
+              Correo
+            </a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <dialog class="video-modal" id="videoModal" aria-label="Video">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar"></button>
+      <video id="portfolioVideo" controls playsinline preload="metadata"></video>
+      <div class="video-placeholder" id="videoPlaceholder">Reel</div>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
